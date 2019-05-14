@@ -11,41 +11,38 @@
 import java.util.Scanner;
 
 public class SD_20182_T1_E1E117033 {
-
     public static void main(String[] args){
         int [] nilai = new int[8];
-        int min,max,total=0;
-        double  rata;
+        int nMin,nMax,Total=0;
+        double  Rata;
         
-        Scanner keyboard = new  Scanner(System.in);
-        
-        for(int i=1 ; i<=7 ; i++){
-            System.out.print("nilai praktikum ke-" + i + ": ");
-            nilai[i] = keyboard.nextInt();
-            
-            total = total + nilai[i];
-        }
-        
-        min=nilai[1];
-        max=nilai[1];
+        Scanner input = new  Scanner(System.in);
         
         for(int i=1 ; i<=7 ; i++){
-            if(nilai[i] > max){
-                max = nilai[i];
-            }
-            else if (nilai[i]<min){
-                min = nilai [i];
-            }
+            System.out.print("Nilai praktikum ke-" + i + ": ");
+            nilai[i] = input.nextInt();
+            Total = Total + nilai[i];
         }
         
-        rata = total / 7;
-        System.out.println("\nnilai praktikum rata-rata : "+rata);
-        System.out.println("nilai praktikum tertinggi : "+max);
-        System.out.println("nilai praktikum tertinggi : "+min+"\n");
+        nMin=nilai[1];
+        nMax=nilai[1];
+        for(int i=1 ; i<=7 ; i++){
+            if(nilai[i] > nMax){
+                nMax = nilai[i];
+            }
+            else if (nilai[i]<nMin){
+                nMin = nilai [i];
+            }
+        }
+        System.out.println("-------------------------------");
+        Rata = Total / 7;
+        System.out.println("Nilai praktikum rata-rata : "+Rata);
+        System.out.println("Nilai praktikum tertinggi : "+nMax);
+        System.out.println("Nilai praktikum terendah : "+nMin+"\n");
         
         for(int i=1 ; i<=7 ; i++){
             System.out.print(nilai[i]+", ");
         }
+        System.out.println("\n-------------------------------");
     }
 }
-
