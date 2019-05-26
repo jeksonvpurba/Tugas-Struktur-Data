@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tugas2 {
+public class SD_20182_T2_E1E117033 {
     public static void main(String[] args) {
         
         Scanner input=new Scanner(System.in);
